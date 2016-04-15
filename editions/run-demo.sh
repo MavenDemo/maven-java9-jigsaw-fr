@@ -43,19 +43,23 @@ enter
 clear
 
 commentaire "JDK 9 classique: compile and run..."
-run javac -version src/main/java/bytecode/Display.java 
-run java -cp src/main/java bytecode.Display
+j9
+run javac -version src/main/java/bytecode/Display*.java 
+run java -showversion -cp src/main/java bytecode.Display2
 commentaire "tiens, pour l'instant le JDK 9 produit du bytecode de JRE 8"
+commentaire "Remarquez la nouvelle API jdk.Version"
 
 enter
 
 commentaire "run avec JRE 8"
 j8
 run java -cp src/main/java bytecode.Display
+commentaire "Vous vous rappelez du source Java 7 qui compilé par le JDK 8 intégrait des APIs Java 8?"
+commentaire "Le JDK 9 fait cela avec les banales concaténations de String..."
+
+enter
 
 commentaire "JDK 8: compile and run..."
 \rm -f src/main/java/bytecode/*.class
 run javac -version src/main/java/bytecode/Display.java 
-run java -cp src/main/java bytecode.Display
-commentaire "Vous vous rappelez du source Java 7 qui compilé par le JDK 8 intégrait des APIs Java 8?"
-commentaire "Le JDK 9 fait cela avec les concaténations de String..."
+run java -showversion -cp src/main/java bytecode.Display

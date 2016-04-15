@@ -27,7 +27,7 @@ import java.io.InputStream;
  */
 public class Display
 {
-    private static String esc( String esc )
+    protected static String esc( String esc )
     {
         return "\u001B[" + esc + "m";
     }
@@ -70,7 +70,8 @@ public class Display
         System.out.println( esc( "1" ) + "Java " + version + " bytecode running on JVM "
             + System.getProperty( "java.specification.version" ) + esc( "0" ) );
 
-        System.out.println( "System properties:" );
+        System.out.println();
+        System.out.println( esc( "1" ) + "System properties:" + esc( "0" ) );
         printSytemProperty( "java.version" );
         printSytemProperty( "java.runtime.version" );
         printSytemProperty( "java.vm.version" );
