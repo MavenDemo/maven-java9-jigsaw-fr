@@ -46,16 +46,17 @@ commentaire "JDK 9 classique: compile and run..."
 j9
 run javac -version src/main/java/bytecode/Display*.java 
 run java -showversion -cp src/main/java bytecode.Display2
-commentaire "tiens, pour l'instant le JDK 9 produit du bytecode de JRE 8"
+commentaire "Pour l'instant (build 113), le JDK 9 produit du bytecode de JRE 8 (52.0)"
 commentaire "Remarquez la nouvelle API jdk.Version"
 
 enter
 
-commentaire "run avec JRE 8"
+commentaire "Opportunisme: run avec JRE 8"
 j8
 run java -cp src/main/java bytecode.Display
-commentaire "Vous vous rappelez du source Java 7 qui compilé par le JDK 8 intégrait des APIs Java 8?"
-commentaire "Le JDK 9 fait cela avec les banales concaténations de String..."
+commentaire "Les banales concaténations de String ont changé de méthode."
+commentaire "Les classes générées sont inutilisables avec un JRE 8."
+commentaire "(il faut dire que ce n'était pas fait pour...)"
 
 enter
 
