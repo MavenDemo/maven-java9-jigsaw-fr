@@ -1,0 +1,3 @@
+[submodule "maven-jep238"]
+	path = maven-jep238
+	url = https://github.com/hboutemy/maven-jep238
