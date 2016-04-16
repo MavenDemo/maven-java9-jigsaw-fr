@@ -64,3 +64,19 @@ commentaire "JDK 8: compile and run..."
 \rm -f src/main/java/bytecode/*.class
 run javac -version src/main/java/bytecode/Display.java 
 run java -showversion -cp src/main/java bytecode.Display
+
+enter
+
+clear
+
+commentaire "et maintenant, premiers tests avec Maven"
+
+commentaire "JDK 9 classique: mvn package..."
+j9
+run mvn -V clean package 
+
+enter
+
+commentaire "JDK 9 jigsaw: mvn package..."
+jig
+run mvn -V clean package
