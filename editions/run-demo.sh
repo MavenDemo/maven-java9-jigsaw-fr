@@ -80,3 +80,25 @@ enter
 commentaire "JDK 9 jigsaw: mvn package..."
 jig
 run mvn -V clean package
+
+enter
+
+commentaire "Globalement, Maven fonctionne, mais il ne faut pas aller trop loin..."
+j9
+run mvn javadoc:javadoc
+
+commentaire "9-ea, ça ne s'analyse pas comme 1.8.0_25..."
+
+commentaire "https://issues.apache.org/jira/browse/MJAVADOC-442"
+
+enter
+
+commentaire "et des fois, les conséquences sont pires..."
+run mvn javadoc:jar
+
+commentaire "https://issues.apache.org/jira/browse/MJAVADOC-441"
+
+enter
+
+commentaire "la solution n'est pourtant pas loin : il existe une version corrigée..."
+run mvn -Pfix-javadoc-archiver javadoc:jar
