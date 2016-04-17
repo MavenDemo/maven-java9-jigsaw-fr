@@ -101,4 +101,6 @@ commentaire "https://issues.apache.org/jira/browse/MJAVADOC-441"
 enter
 
 commentaire "la solution n'est pourtant pas loin : il existe une version corrigée..."
-run mvn -Pfix-javadoc-archiver javadoc:jar
+run mvn -Pfix-javadoc javadoc:jar
+
+commentaire "ça permet de voir le résultat des améliorations de javadoc: JEP 224 HTML5 et JEP 225 search..."
