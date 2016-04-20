@@ -21,6 +21,7 @@ package bytecode;
 
 import java.io.IOException;
 import java.io.InputStream;
+import org.codehaus.plexus.util.Os;
 
 /**
  * Displays bytecode version of the compiled class and information on the JVM running it
@@ -68,7 +69,7 @@ public class Display
     {
         int version = display( this.getClass() );
         System.out.println( esc( "1" ) + "Java " + version + " bytecode running on JVM "
-            + System.getProperty( "java.specification.version" ) + esc( "0" ) );
+            + System.getProperty( "java.specification.version" ) + " on " + Os.OS_FAMILY + esc( "0" ) );
 
         System.out.println();
         System.out.println( esc( "1" ) + "System properties:" + esc( "0" ) );
