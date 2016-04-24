@@ -1,7 +1,11 @@
 [submodule "maven-jep238"]
 	path = maven-jep238
 	url = https://github.com/hboutemy/maven-jep238
-[submodule "maven"]
-	path = maven
+[submodule "maven-core-master-branch"]
+	path = maven-core-master-branch
+	url = https://git-wip-us.apache.org/repos/asf/maven.git
+	branch = master
+[submodule "maven-core-jigsaw-branch"]
+	path = maven-core-jigsaw-branch
 	url = https://git-wip-us.apache.org/repos/asf/maven.git
 	branch = jigsaw
