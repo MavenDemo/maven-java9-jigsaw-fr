@@ -29,7 +29,7 @@ show() {
 commentaire "cette fois-ci, on va builder un code modulaire..."
 show cat src/main/java/module-info.java
 
-commentaire "avec maven-sompiler-plugin classique..."
+commentaire "avec maven-compiler-plugin classique..."
 jig
 run mvn -V clean package
 commentaire "les modules ne sont pas gérés..."
